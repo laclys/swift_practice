@@ -34,13 +34,23 @@ class ViewController: UIViewController {
         // 设置显示行数
         label3.numberOfLines = 3
         self.view.addSubview(label3)
+        
+        //Btn
+        let button1 = UIButton(type: UIButtonType.custom)
+        button1.frame = CGRect(x:20, y:280, width: 100, height:30)
+        // 设置背景颜色
+        button1.backgroundColor = UIColor.red
+        // 设置按键标题
+        button1.setTitle("大家好", for: UIControlState())
+        button1.setTitleColor(UIColor.white, for: UIControlState())
+        button1.setBackgroundImage(UIImage(named: "image"), for: UIControlState())
+        self.view.addSubview(button1)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
