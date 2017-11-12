@@ -49,6 +49,17 @@ class ViewController: UIViewController {
         let imgView = UIImageView(image: #imageLiteral(resourceName: "image"))
         imgView.frame = CGRect(x:30, y: 300, width: 200, height: 200)
         self.view.addSubview(imgView)
+        // UITextField
+        let textInput = UITextField(frame: CGRect(x: 150, y: 230,width: 100, height: 30))
+        // 设置输入框边框风格
+        textInput.borderStyle = UITextBorderStyle.roundedRect
+        // 设置文字颜色
+        textInput.textColor = UIColor.red
+        // 设置对齐方式
+        textInput.textAlignment = NSTextAlignment.center
+        // 设置提示文字
+        textInput.placeholder = "please input~"
+        self.view.addSubview(textInput)
     }
 
     override func didReceiveMemoryWarning() {
