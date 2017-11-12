@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let label = UILabel(frame: CGRect(x: 20, y: 20, width: 200,height:30))
@@ -50,18 +51,20 @@ class ViewController: UIViewController {
         imgView.frame = CGRect(x:30, y: 300, width: 200, height: 200)
         self.view.addSubview(imgView)
         // UITextField
-        let textInput = UITextField(frame: CGRect(x: 150, y: 230,width: 100, height: 30))
-        // 设置输入框边框风格
-        textInput.borderStyle = UITextBorderStyle.roundedRect
-        // 设置文字颜色
-        textInput.textColor = UIColor.red
-        // 设置对齐方式
-        textInput.textAlignment = NSTextAlignment.center
-        // 设置提示文字
-        textInput.placeholder = "please input~"
-        self.view.addSubview(textInput)
+        let textField = UITextField(frame: CGRect(x: 150, y: 230,width: 100, height: 30))
+        textField.borderStyle = UITextBorderStyle.roundedRect
+        textField.returnKeyType = UIReturnKeyType.done
+        textField.delegate=self
+        self.view.addSubview(textField)
     }
-
+    // 键盘 return 键的响应
+    func textFieldShouldReturn(_ textInput: UITextField) -> Bool {
+        //收起键盘
+        textInput.resignFirstResponder()
+        //打印出文本框中的值
+        print(textInput.text ?? "")
+        return true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
