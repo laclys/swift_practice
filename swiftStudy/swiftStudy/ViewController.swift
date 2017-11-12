@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         
         //Btn
         let button1 = UIButton(type: UIButtonType.custom)
-        button1.frame = CGRect(x:20, y:280, width: 100, height:30)
+        button1.frame = CGRect(x:20, y:230, width: 100, height:30)
         // 设置背景颜色
         button1.backgroundColor = UIColor.red
         // 设置按键标题
@@ -45,6 +45,10 @@ class ViewController: UIViewController {
         button1.setTitleColor(UIColor.white, for: UIControlState())
         button1.setBackgroundImage(UIImage(named: "image"), for: UIControlState())
         self.view.addSubview(button1)
+        // UImageView
+        let imgView = UIImageView(image: #imageLiteral(resourceName: "image"))
+        imgView.frame = CGRect(x:30, y: 300, width: 200, height: 200)
+        self.view.addSubview(imgView)
     }
 
     override func didReceiveMemoryWarning() {
