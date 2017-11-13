@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +49,31 @@ class ViewController: UIViewController {
         // 设置步长
         stepper.stepValue = 1
         self.view.addSubview(stepper)
+        
+        // 选择控制器
+        let pickerView = UIPickerView(frame: CGRect(x: 20, y: 210, width: 280, height: 200))
+        // 设置代理
+        pickerView.delegate = self
+        // 设置数据源
+        pickerView.dataSource = self
+        self.view.addSubview(pickerView)
     }
     
     func change (slider:UISlider) {
         print(slider.value)
     }
-
+    // 协议方法 需要返回选择控制器控件每组的行数
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 10
+    }
+    // 需要返回选择控制器的分组数
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    // 返回每个分组中每行数据的标题
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "第\(component+1)组第\(row)行"
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
