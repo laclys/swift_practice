@@ -34,6 +34,21 @@ class ViewController: UIViewController {
         // 拖动结束再触发
         slider.isContinuous = false
         
+        // 创建进度条控件实例
+        let progressView = UIProgressView(progressViewStyle: UIProgressViewStyle.default)
+        // 设置位置和高度
+        progressView.frame = CGRect(x: 20, y: 150, width: 280, height: 10)
+        // 设置当前进度
+        progressView.progress = 0.5
+        self.view.addSubview(progressView)
+        // 步进器
+        let stepper = UIStepper(frame: CGRect(x: 180,y: 180, width: 0, height: 0))
+        stepper.tintColor = UIColor.red
+        stepper.minimumValue = 0
+        stepper.maximumValue = 100
+        // 设置步长
+        stepper.stepValue = 1
+        self.view.addSubview(stepper)
     }
     
     func change (slider:UISlider) {
