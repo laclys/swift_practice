@@ -57,6 +57,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // 设置数据源
         pickerView.dataSource = self
         self.view.addSubview(pickerView)
+        // UISreachBar
+        let searchBar = UISearchBar(frame: CGRect(x: 20, y: 350, width: 100, height: 280))
+        // 设置控件风格
+        searchBar.searchBarStyle = UISearchBarStyle.minimal
+        // 将控件添加到当前视图
+        self.view.addSubview(searchBar)
     }
     
     func change (slider:UISlider) {
