@@ -21,8 +21,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touch(_ sender: AnyObject) {
+        let viewController = ViewControllerTwo()
+        viewController.data = "这是第一个页面传过来的data~"
         // 跳转到第二个界面
-        self.present(ViewControllerTwo(), animated: true, completion: nil)
+        self.present(viewController, animated: true, completion: nil)
     }
 
 }

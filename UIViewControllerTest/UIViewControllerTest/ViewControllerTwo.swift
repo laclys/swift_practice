@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewControllerTwo: UIViewController {
-
+    // 声明一个属性来接收传递的数据
+    var data:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         // 添加返回btn
@@ -18,6 +19,11 @@ class ViewControllerTwo: UIViewController {
         button.setTitle("返回", for: UIControlState())
         button.addTarget(self, action: #selector(ret), for: UIControlEvents.touchUpInside)
         self.view.addSubview(button)
+        
+        // 添加一个文本标签
+        let label = UILabel(frame:CGRect(x: 20, y: 200, width: 280, height: 30))
+        label.text = data
+        self.view.addSubview(label)
     }
 
     override func didReceiveMemoryWarning() {
