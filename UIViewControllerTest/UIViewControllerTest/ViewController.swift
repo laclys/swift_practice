@@ -9,10 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var label:UILabel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        label = UILabel(frame:CGRect(x: 20, y: 100, width: 280,height: 30))
+        self.view.addSubview(label!)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +25,9 @@ class ViewController: UIViewController {
     @IBAction func touch(_ sender: AnyObject) {
         let viewController = ViewControllerTwo()
         viewController.data = "这是第一个页面传过来的data~"
+        viewController.closure = {(data:String) in
+            self.label?.text = data
+        }
         // 跳转到第二个界面
         self.present(viewController, animated: true, completion: nil)
     }

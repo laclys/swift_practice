@@ -11,6 +11,7 @@ import UIKit
 class ViewControllerTwo: UIViewController {
     // 声明一个属性来接收传递的数据
     var data:String?
+    var closure: ((String)->Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         // 添加返回btn
@@ -32,6 +33,7 @@ class ViewControllerTwo: UIViewController {
     }
     
     func ret() {
+        self.closure!("第二个页面传来的data")
         self.dismiss(animated: true, completion: nil)
     }
     
