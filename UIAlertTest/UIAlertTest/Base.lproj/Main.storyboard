@@ -29,6 +29,14 @@
                                     <action selector="pop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7lv-F0-Hpr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gb-GR-Nmx">
+                                <rect key="frame" x="140" y="418" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="抽屉效果Alert"/>
+                                <connections>
+                                    <action selector="pop2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcS-wL-lou"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
