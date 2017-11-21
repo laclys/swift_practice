@@ -35,8 +35,10 @@ class TableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+    // 实现导航功能
     func click () {
-        
+        let viewController = ViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
 }
