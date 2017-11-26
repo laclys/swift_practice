@@ -7,20 +7,22 @@
 //
 
 import UIKit
+import WebKit
 
-class ViewController: UIViewController, UIWebViewDelegate {
-
+class ViewController: UIViewController{
+    
+    var wkView:WKWebView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 创建WebView视图
-        let webView = UIWebView(frame: self.view.bounds)
-        // 创建网页url
+        // 创建网页配置
+        let config = WKWebViewConfiguration()
+        // 对网页视图实例化
+        wkView = WKWebView(frame: self.view.frame, configuration: config)
+        self.view.addSubview(wkView!)
         let url = URL(string: "https://www.baidu.com/")
-        // 创建请求
         let req = URLRequest(url: url!)
-        // 加载网页
-        webView.loadRequest(req)
-        self.view.addSubview(webView)
+        wkView!.load(req)
     }
 
     override func didReceiveMemoryWarning() {
