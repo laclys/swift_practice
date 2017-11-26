@@ -8,31 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UIScrollViewDelegate {
+    
+    var imageView: UIImageView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 进行ScrollView的实例化
-        let scView = UIScrollView(frame: self.view.bounds)
+        let scView = UIScrollView(frame: self.view.frame)
         // 将滚动视图添加到当前页面
         self.view.addSubview(scView)
-        // 创建两个内容视图
-        let subView1 = UIView(frame: self.view.frame)
-        subView1.backgroundColor = UIColor.darkGray
-        let subView2 = UIView(frame: CGRect(x: self.view.frame.size.width, y: 0,width: self.view.frame.size.width, height: self.view.frame.size.height))
-        subView2.backgroundColor = UIColor.red
-        // 将视图添加进UIScrollView视图中
-        scView.addSubview(subView1)
-        scView.addSubview(subView2)
-        // 设置UIScrollView实例
-        scView.contentSize = CGSize(width: self.view.frame.size.width*2, height: self.view.frame.size.height)
+        // 设置代理
+        scView.delegate = self
+        imageView = UIImageView(image: UIImage(named: "pic001"))
+        imageView?.frame = self.view.frame
+        scView.addSubview(imageView!)
+        scView.contentSize = self.view.frame.size
+        
+        // 开启自动定位分页效果
+        scView.isPagingEnabled = true
+        
+        // 设置缩放限度
+        scView.minimumZoomScale = 0.5
+        scView.maximumZoomScale = 2
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView!
+    }
 
 }
 
