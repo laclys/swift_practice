@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         // 设置标题
         self.tabBarItem.title = "CBA"
         self.view.backgroundColor = UIColor.blue
+        // 使用系统风格标签
+        let item = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.history, tag: 1)
+        self.tabBarItem = item
     }
 
     override func didReceiveMemoryWarning() {

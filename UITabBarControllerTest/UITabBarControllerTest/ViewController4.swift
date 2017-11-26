@@ -15,6 +15,9 @@ class ViewController4: UIViewController {
         // 设置标题
         self.tabBarItem.title = "UFC"
         self.view.backgroundColor = UIColor.green
+        // 使用系统风格标签
+        let item = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.featured, tag: 1)
+        self.tabBarItem = item
     }
 
     override func didReceiveMemoryWarning() {

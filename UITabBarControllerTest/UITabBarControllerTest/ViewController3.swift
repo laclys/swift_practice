@@ -15,6 +15,9 @@ class ViewController3: UIViewController {
         // 设置标题
         self.tabBarItem.title = "首页"
         self.view.backgroundColor = UIColor.red
+        // 使用系统风格标签
+        let item = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.favorites, tag: 1)
+        self.tabBarItem = item
     }
 
     override func didReceiveMemoryWarning() {
