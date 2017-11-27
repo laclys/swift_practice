@@ -45,6 +45,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = dataArray?[indexPath.row]
         return cell
     }
+    
+    // 设置分组列表的分区数
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
 
 
 }
