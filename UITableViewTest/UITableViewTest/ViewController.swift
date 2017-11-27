@@ -50,7 +50,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-
+    
+    // 设置分区头部标题
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "头部~@"
+    }
+    // 设置分区尾部
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "这里是尾部"
+    }
 
 }
 
