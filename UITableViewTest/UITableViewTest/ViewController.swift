@@ -8,6 +8,13 @@
 
 import UIKit
 
+class Product: NSObject {
+    var name:String?
+    var price:String?
+    var ImageName:String?
+    var subTitle:String?
+    
+}
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var dataArray: Array<String>?

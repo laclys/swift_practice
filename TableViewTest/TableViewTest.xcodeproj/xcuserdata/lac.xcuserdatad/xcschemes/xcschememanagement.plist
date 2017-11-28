@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>UITableViewTest2.xcscheme</key>
+		<key>TableViewTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>03E72E5C1FCC51BD001D6A7E</key>
+		<key>03F943671FCDA628004C122A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

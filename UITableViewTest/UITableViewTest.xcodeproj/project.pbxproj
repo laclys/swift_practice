@@ -22,6 +22,8 @@
 		03E72E491FCC4708001D6A7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E72E4C1FCC4708001D6A7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03E72E4E1FCC4708001D6A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03E72E781FCDA46B001D6A7E /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		03E72E791FCDA46B001D6A7E /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,8 @@
 				03E72E491FCC4708001D6A7E /* Assets.xcassets */,
 				03E72E4B1FCC4708001D6A7E /* LaunchScreen.storyboard */,
 				03E72E4E1FCC4708001D6A7E /* Info.plist */,
+				03E72E781FCDA46B001D6A7E /* ProductTableViewCell.swift */,
+				03E72E791FCDA46B001D6A7E /* ProductTableViewCell.xib */,
 			);
 			path = UITableViewTest;
 			sourceTree = "<group>";
@@ -302,6 +306,7 @@
 				03E72E531FCC4708001D6A7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
